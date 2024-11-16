@@ -1,8 +1,28 @@
 {
-    "rewrites":[
-        {
-            "source":"/(.*)",
-            "destination":"/"
-        }
+    "version": 2,
+    "builds": [
+      {
+        "src": "frontend/build/**",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "admin/build/**",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "backend/server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/admin/(.*)",
+        "dest": "/admin/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/frontend/build/$1"
+      }
     ]
-}
+  }
+  
