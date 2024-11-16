@@ -17,11 +17,15 @@
     "routes": [
       {
         "src": "/admin/(.*)",
-        "dest": "/admin/$1"
+        "dest": "/admin/build/$1"
       },
       {
         "src": "/(.*)",
         "dest": "/frontend/build/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/frontend/build/index.html"
       }
     ]
   }
