@@ -71,3 +71,31 @@ npm run dev
 # Frontend
 cd ../client
 npm run dev
+
+*Folder Structure
+
+prescripto/
+├── client/           # React frontend
+├── server/           # Node.js + Express backend
+│   ├── models/       # Mongoose schemas
+│   ├── routes/       # API routes
+│   ├── controllers/  # Business logic
+│   ├── utils/        # JWT, payment utils
+│   └── .env          # Environment variables
+
+
+*Future Enhancements
+Email notification for bookings
+
+Admin analytics dashboard
+
+Doctor-side login and management
+
+Prescription PDF download
+
+ Author
+Himanshu
+📧 hkhimanshu3104@gmail.com
+
+
+
